@@ -1,5 +1,5 @@
 'use client'
-export default function NumerosBotones({
+export default function NumerosBotonesOperadores({
     texto,
     keyPress,
     error,
@@ -16,7 +16,7 @@ export default function NumerosBotones({
     }
     return (
         <div
-         className="numeros"
+        className="operadores"
             onClick={(e) => {
                 sendKey(texto)
             }}
