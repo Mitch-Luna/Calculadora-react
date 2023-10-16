@@ -10,7 +10,8 @@ export default function NumerosBotones({
     keyPress?: any
     error?: boolean
     className?: any
-}) {
+}) 
+{
     const sendKey = (key: string) => {
         keyPress(key)
     }
@@ -21,7 +22,7 @@ export default function NumerosBotones({
                 sendKey(texto)
             }}
         >
-            <div className="h-36 font-bold text-3xl  flex flex-col justify-center text-white text-center">
+            <div className="h-36 font-bold text-3xl  flex flex-col justify-center text-white text-center bg-red-700">
                 <span>{texto}</span>
             </div>
 
