@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from "react"
 import Pantalla from "./pantalla";
 import Teclado from "./teclado";
@@ -18,11 +17,13 @@ export default function Calculadora() {
   const pressOperador = (nuevoOperador: string) => {
     if (operador && texto !== "") {
       calcularResultado();
-    } else {
+    } else if (texto !== "") {
       setResultado(parseFloat(texto));
+      setTexto("");
+      setOperador(nuevoOperador);
+    } else {
+      setOperador(nuevoOperador);
     }
-    setTexto(""); // Limpiar el texto al seleccionar un operador
-    setOperador(nuevoOperador);
   };
 
   const calcularResultado = () => {
@@ -43,7 +44,7 @@ export default function Calculadora() {
           }
         }
         
-        setTexto(resultado!.toString());
+        setTexto(resultado!.toString() || "");
         setOperador(null);
       }
     }
@@ -62,15 +63,15 @@ export default function Calculadora() {
       pressOperador("÷");
     } else if (key === '=') {
       calcularResultado();
-    } else {
-      setTexto(texto + key); 
-    }
+    }  else {
+        setTexto(texto + key); 
+      }
   };
 
   return (
-    <div className="border p-1 bg-gray-300">
-      <div className="p-5 bg-slate-800">
-        <Pantalla texto={texto || "0"  } resultado={resultado} />
+    <div className="mb-1 rounded-2xl">
+      <div className="bg-slate-700 rounded-3xl">
+        <Pantalla texto={texto || "0" } resultado={resultado} />
         <Teclado keyPress={sendKey} />
       </div>
     </div>
