@@ -70,7 +70,7 @@ export default function Calculadora() {
 
   return (
     <div className="mb-1 rounded-2xl">
-      <div className="bg-slate-700 rounded-3xl">
+      <div className="p-1 m-1 bg-slate-700 rounded-3xl">
         <Pantalla texto={texto || "0" } resultado={resultado} />
         <Teclado keyPress={sendKey} />
       </div>

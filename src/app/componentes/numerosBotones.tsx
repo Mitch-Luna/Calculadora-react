@@ -21,7 +21,7 @@ export default function NumerosBotones({
     }
     return (
         <div
-            className={`bg-gray-400 w-1/3 ml-0.5 mt-1 flex-col items-center hover:cursor-pointer hover:bg-gray-300 border-solid  ${color} ${zise} ${border}`}
+            className={`bg-gray-400 w-1/3 ml-0.5 m-1 flex-col items-center hover:cursor-pointer hover:bg-gray-300 m-0.5 ${color} ${zise} ${border}`}
             onClick={(e) => {
                 sendKey(texto)
             }}

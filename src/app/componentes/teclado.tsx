@@ -6,8 +6,8 @@ export default function Teclado({ keyPress, error, color, zise, border}: { keyPr
         keyPress(key)
     }
     return (
-        <div className="mt-2 p-1">
-            <div className="flex flex-row justify-between  ">
+        <div className="">
+            <div className="flex flex-row justify-between">
                 <NumerosBotones color="bg-stone-500" zise="basis-5/6" texto="C" keyPress={sendKey} />
                 <NumerosBotones color="bg-orange-400" zise="basis-1/4" texto="÷" keyPress={sendKey} />
             </div>
@@ -31,9 +31,9 @@ export default function Teclado({ keyPress, error, color, zise, border}: { keyPr
                 <NumerosBotones color="bg-orange-400"  texto="+" keyPress={sendKey} />
             </div>
             <div className="flex flex-row justify-between">
-                <NumerosBotones zise="basis-3/5" border="rounded-bl-lg" texto="0" keyPress={sendKey} />
-                <NumerosBotones  zise="" texto="." keyPress={sendKey} />
-                <NumerosBotones border="rounded-br-lg" color="bg-orange-400"  zise="" texto= "=" keyPress={sendKey} />
+                <NumerosBotones zise="basis-1/2" border="rounded-bl-lg" texto="0" keyPress={sendKey} />
+                <NumerosBotones  zise="basis-1/4" texto="." keyPress={sendKey} />
+                <NumerosBotones border="rounded-br-lg" color="bg-orange-400"  zise="basis-1/4" texto= "=" keyPress={sendKey} />
             </div>
         </div>
     )
